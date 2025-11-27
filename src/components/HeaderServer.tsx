@@ -7,5 +7,5 @@ export default async function HeaderServer() {
   const cookieStore = await cookies();
   const loggedIn = !!cookieStore.get("lg_session")?.value;
 
-  return <Header loggedIn={loggedIn} />;
+  return <Header isLoggedIn={loggedIn} />;
 }
